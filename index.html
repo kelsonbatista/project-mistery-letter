@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mistery Letter</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header>
@@ -18,9 +19,17 @@
   <main>
     <section class="input">
       <div class="input__content">
-        <input type="text" name="typeletter" id="carta-texto">
+        <input type="text" name="typeletter" class="input__text" id="carta-texto">
+      </div>
+    </section>
+
+    <section class="letter">
+      <div class="letter__content">
+        <p class="letter__letter" id="carta-gerada"></p>
       </div>
     </section>
   </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>

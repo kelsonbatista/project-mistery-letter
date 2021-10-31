@@ -1,0 +1,21 @@
+.top__content, .input__content, .letter__content {
+  margin: auto;
+  width: 85%;
+  text-align: center;
+}
+
+.top__content {
+  margin-top: 150px;
+}
+
+.top__title {
+  font-size: 34px;
+  margin-bottom: 100px;
+}
+
+.input__text {
+  width: 60%;
+  height: 30px;
+  font-size: 22px;
+  padding: 10px;
+}
