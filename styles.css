@@ -34,3 +34,9 @@ span {
   padding: 0 5px;
   font-size: 40px;
 }
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
