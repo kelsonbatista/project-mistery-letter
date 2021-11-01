@@ -5,7 +5,24 @@
 const divLetter = document.querySelector('#carta-gerada');
 const inputField = document.querySelector('#carta-texto');
 const btnGenerate = document.querySelector('#criar-carta');
+const style = ['newspaper', 'magazine1', 'magazine2'];
+const size = ['medium', 'big', 'reallybig'];
+const rotation = ['rotateleft', 'rotateright'];
+const skew = ['skewleft', 'skewright'];
 let countWord = 0;
+
+function randomClass() {
+  let newClass = '';
+  const allClasses = [style, size, rotation, skew];
+  for (let i = 0; i < allClasses.length; i += 1) {
+    const len = allClasses[i].length;
+    const rand = Math.floor(Math.random() * (len));
+    // console.log(`Grupo ${i} - ${rand}`);
+    newClass += allClasses[i][rand];
+    if (i !== allClasses.length - 1) newClass += ' ';
+  }
+  return newClass;
+}
 
 function validLetter(text) {
   const splitPhrase = text.split(' ');
@@ -18,7 +35,8 @@ function validLetter(text) {
   } else {
     for (let i = 0; i < splitPhrase.length; i += 1) {
       const divWord = document.createElement('span');
-      divWord.className = 'word';
+      // divWord.className = 'word';
+      divWord.className = randomClass();
       divWord.innerHTML = splitPhrase[i];
       divLetter.appendChild(divWord);
       countWord += 1;
@@ -35,4 +53,5 @@ btnGenerate.addEventListener('click', () => {
     countWord = 0;
   }
   validLetter(phrase);
+  randomClass();
 });

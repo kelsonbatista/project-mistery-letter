@@ -16,6 +16,10 @@
   margin: 100px auto;
 }
 
+.letter__content {
+  margin-bottom: 200px;
+}
+
 .input__text {
   width: 60%;
   height: 30px;
@@ -31,14 +35,17 @@
 }
 
 span {
-  padding: 0 5px;
+  margin: 10px;
+}
+
+.error {
   font-size: 40px;
 }
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
@@ -85,4 +92,11 @@ span {
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+#carta-gerada {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
