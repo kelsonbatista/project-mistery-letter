@@ -24,5 +24,4 @@ btnGenerate.addEventListener('click', () => {
     divLetter.appendChild(divWord);
     countWord += 1;
   }
-  inputField.value = ' ';
 });
