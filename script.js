@@ -9,10 +9,13 @@ let countWord = 0;
 btnGenerate.addEventListener('click', () => {
   const phrase = inputField.value;
   const splitPhrase = phrase.split(' ');
+  console.log(countWord);
   if (countWord > 0) {
     for (let i = 1; i <= countWord; i += 1) {
       divLetter.lastElementChild.remove();
+      console.log(`apagou ${i}`);
     }
+    countWord = 0;
   }
   for (let i = 0; i < splitPhrase.length; i += 1) {
     const divWord = document.createElement('span');
