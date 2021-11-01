@@ -37,6 +37,7 @@ function validLetter(text) {
       const divWord = document.createElement('span');
       // divWord.className = 'word';
       divWord.className = randomClass();
+      divWord.id = i;
       divWord.innerHTML = splitPhrase[i];
       divLetter.appendChild(divWord);
       countWord += 1;
@@ -54,4 +55,10 @@ btnGenerate.addEventListener('click', () => {
   }
   validLetter(phrase);
   randomClass();
+});
+
+divLetter.addEventListener('click', (event) => {
+  const wordId = event.target.id;
+  const divWord = document.getElementsByTagName('span');
+  divWord[wordId].className = randomClass();
 });
