@@ -12,6 +12,11 @@
   font-size: 40px;
 }
 
+.top__quantity {
+  font-size: 25px;
+  display: inline-block;
+}
+
 .input__content {
   margin: 100px auto;
 }

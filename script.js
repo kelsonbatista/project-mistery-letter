@@ -10,6 +10,7 @@ const size = ['medium', 'big', 'reallybig'];
 const rotation = ['rotateleft', 'rotateright'];
 const skew = ['skewleft', 'skewright'];
 let countWord = 0;
+const counter = document.querySelector('#carta-contador');
 
 function randomClass() {
   let newClass = '';
@@ -41,7 +42,7 @@ function validLetter(text) {
       divWord.innerHTML = splitPhrase[i];
       divLetter.appendChild(divWord);
       countWord += 1;
-    }
+    } counter.innerHTML = `${countWord}`;
   }
 }
 
